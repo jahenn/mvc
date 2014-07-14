@@ -1,3 +1,9 @@
+```php
+/*
+ * @Author: Jorge Luis Juárez M.
+ */
+```
+
 # @Author: Jorge Luis Juárez M.
 # @email: Personal@JorgeJuarez.net
 # @Web: http://JorgeJuarez.Net
