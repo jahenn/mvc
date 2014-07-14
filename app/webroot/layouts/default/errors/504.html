@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Error Reporting</title>
+
+
+
+	<link rel="stylesheet" type="text/css" href="<?php echo  WEBROOT_URL  . '/layouts/' . DEFAULT_LAYOUT . '/css/bootstrap.css'; ?>">
+
+</head>
+<body>
+	<div class="container">
+		<h2><?php echo $errorException->getMessage(); ?></h2>
+		<?php pr($errorException); ?>
+	</div>
+</body>
+</html>

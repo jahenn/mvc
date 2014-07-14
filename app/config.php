@@ -6,4 +6,8 @@ define('CORE', 'framework/core');
 define('DEFAULT_CONTROLLER', 'Home');
 define('DEFAULT_METHOD', 'index');
 
+define('DEFAULT_LAYOUT', 'default');
+
+
+
 ?>

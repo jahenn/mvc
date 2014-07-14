@@ -8,7 +8,7 @@ class Request {
 
 
 	public function __construct(){
-
+		
 		if(isset($_GET['url'])){
 			$url = explode('/', $_GET['url']);
 			$url = array_filter($url);
@@ -16,7 +16,23 @@ class Request {
 			$this->_controller = array_shift($url);
 			$this->_method = array_shift($url);
 			$this->_args = $url;
+			
+			$query_string = $_GET['url'];
+			$root = str_replace($query_string, '', $_SERVER['REQUEST_URI']);
+			$root = 'http://'.$_SERVER['HTTP_HOST'].$root;
+			
 
+		}else{
+
+			$root = $_SERVER['REQUEST_URI'];
+			$root = 'http://'.$_SERVER['HTTP_HOST'].$root;
+			
+		}
+
+		$root = rtrim($root, '/');
+
+		if(!defined('WEBROOT_URL')){
+			define('WEBROOT_URL', $root);
 		}
 
 

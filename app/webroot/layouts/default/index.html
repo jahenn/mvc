@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	
+	<?php echo $this->Html->css('bootstrap'); ?>
+
+
+	<?php echo $this->Html->js('jquery'); ?>
+	<?php echo $this->Html->js('bootstrap'); ?>
+	
+
+</head>
+<body>
+	<nav class="navbar navbar-default" role="navigation">
+	  <div class="container-fluid">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="#">PHP MVC Framework & Bootstrap</a>
+	    </div>
+
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav">
+	      	<?php $url = $this->Html->url(array(
+	      		'controller' => 'Home',
+	      		'action' => 'index'
+	      	)); ?>
+	        <li class="active"><a href="<?php echo $url ?>">Home</a></li>
+	        
+	      </ul>
+	      <ul class="nav navbar-nav">
+	        <li><a href="#">Contact</a></li>
+	        
+	      </ul>
+	    </div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>	
+	<div style="background-color:black;">
+		
+	</div>
+
+
+	<div class="container">
+		<?php $this->fetchContent(); ?>
+	</div>
+</body>
+</html>
